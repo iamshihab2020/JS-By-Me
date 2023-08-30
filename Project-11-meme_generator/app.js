@@ -5,7 +5,7 @@ generatorBtn = document.querySelector('.generatorBtn');
 
 
 const updateDetails = (url,title,author) =>{
-    memeImage.src = url
+    memeImage.setAttribute('src', url);
     memeTitle.innerHTML = title;
     memeAuthor.innerHTML = `Meme by : ${author}`
 }
