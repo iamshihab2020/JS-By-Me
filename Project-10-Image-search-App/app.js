@@ -60,9 +60,6 @@ async function searchImages(){
         searchResults.appendChild(imageWrapper);
     });
     
-
-
-    
     page++;
     if(page > 1){
         showMoreButton.style.display = 'block';
