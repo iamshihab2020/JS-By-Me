@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+}
+
+body{
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper{
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 600px;
+    background-color: aquamarine;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.tittle{
+    color: rgb(0, 5, 40);
+}
+.password_gen{
+    padding: 30px;
+    position: relative;
+}
+
+#pass{
+    padding: 15px;
+    font-size: 20px;
+    width: 470px;
+    border-radius: 10px;
+}
+
+.password_gen i{
+    position: absolute;
+    top: 44%;
+    right: 10%;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* CSS */
+.generate{
+  all: unset;
+  width: 138px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.generate::after,
+.generate::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.generate::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.generate::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.generate:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.generate:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.generate:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start; /* Align items to the top on smaller screens */
+    }
+
+    .wrapper {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 100%; /* Allow the container to use the full width */
+    }
+
+    #pass{
+        width: 450px;
+    }
+
+}
+
+@media (max-width: 538px) {
+    #pass{
+        width: 350px;
+    }
+}
+
+@media (max-width: 450px) {
+    #pass{
+        width: 285px;
+    }
+    i#copy{
+        right: 45px;
+    }
+
+}
