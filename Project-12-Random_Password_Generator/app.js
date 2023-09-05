@@ -24,7 +24,6 @@ function passGenerate(){
     copyNow.addEventListener('click',()=>{
         paswordBox.select();
         document.execCommand("copy");
-        alert("Copied to clipboard: " + paswordBox.value);
     })
 }
 
