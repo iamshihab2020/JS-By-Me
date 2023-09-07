@@ -14,6 +14,7 @@
         <h1>Currency Converter <i class="fa-solid fa-money-bill"></i></h1>
         <div class="convertFrom">
             <select name="convertFrom" id="convertFrom">
+                <option value="">Convert From</option>
                 <option value="taka">Taka</option>
                 <option value="dollar">Dollar</option>
                 <option value="rupees">Rupees</option>
@@ -24,6 +25,7 @@
         </div>
         <div class="convertTo">
             <select name="convertFrom" id="convertTo">
+                <option value="">Convert To</option>
                 <option value="taka">Taka</option>
                 <option value="dollar">Dollar</option>
                 <option value="rupees">Rupees</option>
@@ -35,11 +37,15 @@
         <button id="convert">Convert</button>
 
         <div class="results">
-            <input type="text" name="con" id="con" disabled> 
-            <p id="conForm">Taka</p>
+            <div>
+                <input type="text" name="con" id="con" disabled> 
+                <p id="conForm">Taka</p> 
+            </div>
             <p> = </p>
+            <div>
             <input type="text" name="con2" id="con2" disabled> 
             <p id="conTo">Dollar</p>
+            </div>
         </div>
     </div>
 

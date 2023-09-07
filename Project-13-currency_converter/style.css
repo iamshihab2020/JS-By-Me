@@ -1,60 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background-color: #053B50;
     display: flex;
-    flex-direction:row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    margin: 0;
 }
-h1{
+
+h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
-.wrapper{
+
+.wrapper {
     background-color: #64CCC5;
-    height: 500px;
-    width: 500px;
+    width: 90%;
+    max-width: 500px;
     padding: 30px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
+    box-shadow: 0 6px 20px rgba(93, 93, 93, 0.23);
+    height: 600px;
 }
 
-select{
+select,
+#convertFrom,
+#convertMoney,
+#convertTo {
+    width: 100%; /* Apply width: 100% to both select elements */
     padding: 15px 18px;
     font-size: 18px;
     border-radius: 10px;
-    font-weight:500 ;
-    margin: 10px;
+    font-weight: 500;
+    margin: 10px 0;
 }
-#convertMoney{
-    padding: 15px 18px;
-    font-size: 18px;
-    border-radius: 10px;
-    background-color: #EEEEEE;
-}
-
 .convertTo{
-    width: 92%;
+    width: 100%;
 }
-#convertTo{
-    width: 98%;
-}
-
-
-button#convert{
+button#convert {
     margin-top: 30px;
     display: inline-block;
     outline: 0;
@@ -68,42 +64,65 @@ button#convert{
     font-size: 16px;
     background: #053B50;
     color: #EEEEEE;
-    box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
-    transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
-button#convert:hover{
-    background: #176B87;
-    box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
-}
-
-
-.results{
+.results {
     display: flex;
+
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: 30px;
 }
 
-#con{
-    height: 50px;
-    width: 100px;
-    font-size: 20px;
-    background-color: #EEEEEE; 
-    text-align: center;
-
-}
-#con2{
+#con,
+#con2 {
     height: 50px;
     width: 100px;
     font-size: 20px;
     background-color: #EEEEEE;
     text-align: center;
+    margin: 10px;
 }
 
-.results p{
+.results p {
     font-size: 20px;
     margin: 0 20px;
     text-transform: capitalize;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    select,
+    #convertFrom,
+    #convertMoney,
+    #convertTo {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+
+    button#convert {
+        font-size: 14px;
+    }
+
+    #con,
+    #con2 {
+        font-size: 16px;
+        height: 40px;
+        width: 80px;
+    }
+
+    .results p {
+        font-size: 16px;
+    }
 }
