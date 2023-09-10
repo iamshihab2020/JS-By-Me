@@ -13,6 +13,3 @@ hexBtn.addEventListener('click', () => {
     body.style.background = `#${genCode}`;
 });
 
-
-
-

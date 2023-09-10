@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: .3s ease-in-out;
+}
+
+body {
+    background: rgb(64,248,255);
+    background: radial-gradient(circle, rgba(64,248,255,1) 0%, rgba(213,255,208,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure the content is centered vertically */
+}
+
+.wrapper {
+    /* From https://css.glass */
+    background: rgba(12, 53, 106, 0.85);
+    border-radius: 16px;
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(12, 53, 106, 0.96);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: 10px;
+    width: 80%; /* Adjusted width for larger screens */
+    max-width: 600px; /* Limit the maximum width for very large screens */
+    padding: 40px 50px;
+    border-radius: 30px;
+}
+
+header h1 {
+    color: #D5FFD0;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+main {
+    padding: 20px 50px;
+    background: #D5FFD0;
+    border-radius: 20px;
+}
+
+.todoList{
+    margin: 15px 0;
+}
+
+p.list {
+    color: #0C356A;
+    position: relative;
+    padding: 20px 30px;
+    border: 2px solid #0C356A;
+    font-size: 18px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    /* 0C356A */
+}
+
+p.list i {
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    position: relative;
+    max-width: 100%;
+}
+
+footer input {
+    width: 100%; /* Make the input field expand to 100% width */
+    padding: 25px 30px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.addBtn {
+    padding: 14px 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    background-color: #0C356A;
+    color: #D5FFD0;
+    cursor: pointer;
+    border: 2px solid #0C356A;
+}
+.addBtn:hover {
+    background-color: #D5FFD0;
+    color: #0C356A;
+}
+
+.circle {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.dlt {
+    position: absolute;
+    right: 30px;
+    padding: 10px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: #0C356A;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+
+    p.list {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}

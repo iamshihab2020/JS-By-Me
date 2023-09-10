@@ -5,10 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: .3s ease-in-out;
 }
 
 body {
-    background:#E4F1FF ;
+    background:#000000 ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,3 +99,6 @@ p#hexCodeTitle{
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
+
+
+
